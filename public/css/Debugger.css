@@ -1,0 +1,156 @@
+/*
+  Debugger DOM Index
+  * Grid Wrap: id="_DebuggerGrid": Wrap around the grid
+  * App Wrap: id="_DebuggerApps": Wrap around the apps
+
+  Application DOM INDEX
+  * wrap: class="_DebuggerAppWrap": div wrapper containing all elements for this application
+  * app_header: class="_DebuggerAppHeader": div container app Header (app UUID);
+  * children: class="_DebuggerAppChildren": div wrapper containing all elements of the child windows
+  * children_header: class="_DebuggerAppChildrenHeader": div containing child area Header ("Windows");
+  * button.*: class="_DebuggerAppButton": Button elements for various actions
+
+
+  Window/Child DOM INDEX
+  * wrap: class="_DebuggerAppChildWrap": div wrapper containing all elements for this application
+  * list:  class="_DebuggerAppChildList": a UL to which logs (li) are appended to
+  * button.*: class="_DebuggerAppChildButton": Button elements for various actions
+  * header: class="_DebuggerAppChildHeader": Header for the child window (name);
+
+*/
+
+html, body{
+  overflow:hidden;
+}
+
+#_Debugger {
+  border:1px solid black;
+  overflow:hidden;
+}
+
+#_DebuggerApps {
+  height:40%;
+  overflow:scroll;
+}
+
+#_DebuggerGrid{
+  height:40%;
+  overflow:scroll;
+}
+
+/* INDIVIDUAL APP CONTAINERS */
+
+._DebuggerAppWrap {
+  margin:5px;
+  border:1px solid green;
+}
+
+._DebuggerAppHeader {
+}
+
+._DebuggerAppChildrenHeader {
+
+}
+._DebuggerAppChildren {
+  margin:5px;
+  border:1px solid red;
+}
+._DebuggerAppButton{
+
+}
+
+/* INDIVIDUAL APP (CHILD) WINDOWS */
+
+._DebuggerAppChildWrap {
+  margin:5px;
+  border:1px solid blue;
+}
+._DebuggerAppChildHeader {
+
+}
+
+._DebuggerAppChildList{
+  height:100px;
+  width:100%;
+  overflow:scroll;
+  border:1px solid orange;
+}
+
+._DebuggerAppChildList li {
+
+}
+
+._DebuggerAppChildButton {
+
+}
+
+
+/* ERROR TYPES FOR ROW STYLING */
+._debuggerErrorType-log {
+  background-color:#d9edf7 !important;
+}
+._debuggerErrorType-warn {
+  background-color:#fcf8e3  !important;
+}
+._debuggerErrorType-error {
+  background-color:#f2dede  !important;
+}
+._debuggerErrorType-info {
+  background-color:#dff0d8  !important;
+}
+
+
+
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+label {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  line-height: 36px;
+  cursor: pointer;
+}
+label::before {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #1174CF;
+  border-radius: 4px;
+  z-index: -1;
+}
+input[type="radio"] + label::before {
+  border-radius: 18px;
+}
+/* Checked */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  padding-left: 10px;
+  color: #fff;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #1174CF;
+}
+/* Transition */
+label,
+label::before {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}

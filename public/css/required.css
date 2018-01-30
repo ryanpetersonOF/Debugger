@@ -1,0 +1,18 @@
+.top {
+	border-bottom:1px solid black;
+	padding-bottom:10px;
+	margin-bottom:5px;
+}
+
+.title {
+	font-size: 25px;
+	font-style: bold;
+	margin-bottom:5px;
+}
+#header{
+	margin-bottom:10px;
+}
+
+button {
+	margin-bottom:5px;
+}

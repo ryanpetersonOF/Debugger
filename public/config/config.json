@@ -1,0 +1,27 @@
+{	
+    "startup_app": {
+        "name": "Debugger",
+        "description": "Debugger",
+        "url": "http://localhost:9002/index.html",
+        "autoShow": true,
+        "defaultWidth": 500,
+        "defaultHeight": 500,
+        "defaultTop": 100,
+        "defaultLeft": 100,
+        "icon":"http://localhost:9002/config/panda.ico",
+        "uuid": "Debugger-Main"
+    },
+    "runtime": {
+        "arguments": "--v=1",
+        "version": "stable"
+    },
+    "splashScreenImage": "http://localhost:9002/config/OFDsplash.jpg",
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "",
+        "icon": "http://localhost:9002/config/panda.ico",
+        "name": "OpenFin Support"
+    }
+}
+
+
